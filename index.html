@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="script.js"></script>
+    <script src="directives/progress-bar/progress-bar.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl" ng-init="startProgress()">
+
+    My app: {{title}}
+    <div>
+        <input type="text" ng-model="progress.value">
+    </div>
+    <progress-bar data-value="progress.value"></progress-bar>
+    <progress-bar value="20" color="'green'"></progress-bar>
+    <progress-bar value="40"></progress-bar>
+    <progress-bar value="60"></progress-bar>
+    <progress-bar value="50"></progress-bar>
+</body>
+</html>
